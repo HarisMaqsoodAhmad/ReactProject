@@ -1,16 +1,9 @@
-import Counter from "./components/Counter";
-import Hello from "./components/Hello"
-
+import Fruits from "./components/Fruits";
 
 function App() {
 	return (
 		<div className="App">
-			<Hello name="Haris Maqsood" />
-			<Hello name="Ali Maqsood" />
-			<Hello name="Anwar Maqsood" />
-			Hi! I'm Haris Maqsood. I am a FullStack Developer. I work on Classic Programmers. I am {2 * 13} years old person.
-			<Counter />
-			
+			<Fruits />
 		</div>
 	);
 }

@@ -1,10 +1,8 @@
 
 const Hello = (props) => {
-    console.log(props)
-   // var name = props.name;
     return(
         <>
-            <h1>Hey! {props.name}</h1> 
+            <h1>{props.person.message} {props.person.name}</h1> 
         </>
     )
 }
