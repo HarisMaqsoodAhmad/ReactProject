@@ -1,29 +1,34 @@
 import { useState } from "react";
 
 const Counter = () => {
-    const [count, setCount] = useState(0);
+	const [count, setCount] = useState(0);
+    let [incrementBy, setIncrementBy] = useState(1);
 
-    const handleAddByOne = () => {
-        if( count < 10)
-            setCount(count + 1);
+    function increment(){
+        setCount(count + incrementBy)
     }
-    const handleSubByOne = () => {
-        if( count > 0 )
-            setCount( count - 1 );
+    function decrement(){
+        setCount( count - incrementBy )
     }
-    
+    function increaseIncrement(){
+        setIncrementBy( incrementBy+1);
+        console.log( incrementBy );
+    }
+    function decreaseIncrement(){
+        setIncrementBy( incrementBy - 1 )
+    }
+
 	return (
 		<>
-        <div>
-            {count}
-            <br />
-			<button className="btn btn-primary" onClick={handleAddByOne}>
-				Add 1
-			</button>
-            <button className="btn btn-primary" onClick={handleSubByOne}>
-				Minus 1
-			</button>
-        </div>
+			<div>
+				<h1>Count value is: {count}</h1>
+                <button onClick={increment}>Increment</button>
+                <button onClick={decrement}>Decrement</button>
+
+                <h1>We are incrementing the value by {incrementBy}</h1>
+                <button onClick={increaseIncrement}>Increase Increment</button>
+                <button onClick={decreaseIncrement}>Decrease Increment</button>
+			</div>
 		</>
 	);
 };

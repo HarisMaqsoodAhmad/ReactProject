@@ -1,14 +1,7 @@
-import Welcome from "./Welcome";
-import Code from "./Code";
+import Counter from "./Counter"
 
 const ConditionalComponent = () => {
-    const display = false;
-    
-    if( display ) {
-        return <Welcome />
-    }else{
-        return <Code />
-    }
+    return <Counter />
 }
 
 export default ConditionalComponent;

@@ -1,9 +1,9 @@
-const Fruit = ({name, emoji, price}) => {
-    return(
-        <li>
-            {emoji} {name} ${price}
-        </li>
-    )
-}
+const Fruit = ({ name, emoji, price, soldout }) => {
+	return (
+		<li>
+			{emoji} {name} ${price} { soldout? <b>{"Soldout"}</b> : "" }
+		</li>
+	);
+};
 
 export default Fruit;
